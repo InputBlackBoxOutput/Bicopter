@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 6110)
+    (start_pass_no 16060)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -27,30 +27,30 @@
   )
   (rule
     (width 200.0)
-    (clear 200.2)
+    (clear 150.2)
     (clear 100.0 (type smd_to_turn_gap))
-    (clear 50.0 (type smd_smd))
+    (clear 37.6 (type smd_smd))
   )
-  (padstack "Via[0-1]_800:400_um"
+  (padstack "Via[0-1]_600:400_um"
     (shape
-      (circle F.Cu 800.0 0.0 0.0)
+      (circle F.Cu 600.0 0.0 0.0)
     )
     (shape
-      (circle B.Cu 800.0 0.0 0.0)
+      (circle B.Cu 600.0 0.0 0.0)
     )
     (attach off)
   )
   (via 
-    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+    "Via[0-1]_600:400_um" "Via[0-1]_600:400_um" default
   )
   (via 
-    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+    "Via[0-1]_600:400_um-kicad_default" "Via[0-1]_600:400_um" "kicad_default"
   )
   (via_rule
-    default "Via[0-1]_800:400_um"
+    default "Via[0-1]_600:400_um"
   )
   (via_rule
-    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+    "kicad_default" "Via[0-1]_600:400_um-kicad_default"
   )
   (class default
     (clearance_class default)
@@ -63,12 +63,14 @@
     )
   )
   (class "kicad_default"
-    GND +5V +3V3 "Net-(C4-Pad1)" "Net-(C5-Pad1)" "Net-(C6-Pad1)" "/Sheet6241753E/BATT-" "Net-(C8-Pad1)"
-    /Sheet6241753E/BATT+ "Net-(D1-Pad2)" "Net-(D2-Pad2)" "Net-(D4-Pad2)" "Net-(D5-Pad2)" "Net-(D6-Pad2)" "Net-(D7-Pad2)" /Sheet6241753E/CHRG
-    "Net-(D8-Pad2)" /Sheet6241753E/STDBY VCC "Net-(D10-Pad2)" "Net-(IC1-Pad3)" "Net-(IC1-Pad2)" "Net-(IC1-Pad1)" "/SERVO_A"
-    "/SERVO_B" /TXD /RXD /SDA /Sheet623EC3BA/AD0 /Sheet623EC3BA/INT /SCL "/MOTOR_A"
-    "/MOTOR_B" "/LED_A" "/LED_B" /EN /IO0 "Net-(Q1-Pad1)" "Net-(Q2-Pad1)" "Net-(R17-Pad2)"
-    "Net-(R20-Pad1)" "/RGB_R" "/RGB_G" "/RGB_B" /ADC "Net-(D11-Pad6)" "Net-(D11-Pad5)" "Net-(D11-Pad4)"
+    GND +5V +3V3 "Net-(C4-Pad1)" "Net-(C5-Pad1)" "/Sheet6241753E/BATT-" /Sheet6241753E/BATT+ "Net-(D1-Pad2)"
+    "Net-(D2-Pad2)" "Net-(D4-Pad2)" "Net-(D5-Pad2)" "Net-(D6-Pad2)" /Sheet6241753E/CHRG "Net-(D8-Pad2)" /Sheet6241753E/STDBY VCC
+    "Net-(IC1-Pad3)" "Net-(IC1-Pad2)" "Net-(IC1-Pad1)" /SDA /SCL /EN "Net-(Q1-Pad1)" "Net-(Q2-Pad1)"
+    /ADC "/Sheet6241753E/BATT+_OUT" /Sheet6241753E/VBUS "/SERVO_A" "/SERVO_B" /TXD /RXD "/MOTOR_A"
+    "/MOTOR_B" "/LED_A" "/LED_B" /IO0 "Net-(C3-Pad1)" "Net-(C7-Pad1)" "Net-(D3-Pad2)" /IO2
+    /IO4 /IO5 /IO12 /IO27 "/LED_TAIL" "Net-(D7-Pad2)" "Net-(R15-Pad2)" "Net-(R17-Pad1)"
+    "Net-(D10-Pad2)" /IO25 /IO23 /IO26 "Net-(R10-Pad1)" "Net-(R12-Pad2)" "Net-(J8-Pad4)" "Net-(J8-Pad3)"
+    "Net-(J8-Pad1)" "/LED_R" "/LED_G"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
