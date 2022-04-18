@@ -1261,4 +1261,26 @@ F 3 "" H 7800 4325 50  0001 C CNN
 	1    7800 4325
 	1    0    0    -1  
 $EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 625E0BE9
+P 6625 5525
+F 0 "H?" H 6725 5571 50  0000 L CNN
+F 1 "MountingHole" H 6725 5480 50  0000 L CNN
+F 2 "" H 6625 5525 50  0001 C CNN
+F 3 "~" H 6625 5525 50  0001 C CNN
+	1    6625 5525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 625E0F52
+P 6625 5850
+F 0 "H?" H 6725 5896 50  0000 L CNN
+F 1 "MountingHole" H 6725 5805 50  0000 L CNN
+F 2 "" H 6625 5850 50  0001 C CNN
+F 3 "~" H 6625 5850 50  0001 C CNN
+	1    6625 5850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
