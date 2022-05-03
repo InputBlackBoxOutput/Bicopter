@@ -1,0 +1,16 @@
+{
+  "name": "esp32-thermal-cam",
+  "version": "1.0.0",
+  "description": "Electron application for ESP32 THERMAL CAM",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rutuparn Pawar",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.1.2",
+    "electron-packager": "^15.2.0"
+  }
+}
