@@ -1,9 +1,16 @@
 #include <Arduino.h>
+#include "led.h"
+LED led;
 
-void setup() {
-  // put your setup code here, to run once:
+void setup()
+{
+  Serial.begin(115200);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+  led.blinkLED(led.LED_A, 3);
+  led.blinkLED(led.LED_B, 3);
+
+  delay(100);
 }
