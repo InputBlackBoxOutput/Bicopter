@@ -15,12 +15,6 @@ public:
 
     LED();
     void blinkLED(LED_t led = LED_TAIL, uint8_t times = 5);
-    void turnLEDOn(LED_t led = LED_TAIL)
-    {
-        digitalWrite(led, HIGH);
-    }
-    void turnLEDOff(LED_t led = LED_TAIL)
-    {
-        digitalWrite(led, LOW);
-    }
+    inline void turnLEDOn(LED_t led = LED_TAIL);
+    inline void turnLEDOff(LED_t led = LED_TAIL);
 };

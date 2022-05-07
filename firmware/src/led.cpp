@@ -17,3 +17,12 @@ void LED::blinkLED(LED_t led, uint8_t times)
         delay(blinkDelay);
     }
 }
+
+inline void LED::turnLEDOn(LED_t led)
+{
+    digitalWrite(led, HIGH);
+}
+inline void LED::turnLEDOff(LED_t led)
+{
+    digitalWrite(led, LOW);
+}
