@@ -3,6 +3,7 @@
 #include "servo.h"
 #include "motor.h"
 #include "led.h"
+#include "imu.h"
 
 TiltServo servoA(SERVO_A_PIN);
 TiltServo servoB(SERVO_B_PIN);
