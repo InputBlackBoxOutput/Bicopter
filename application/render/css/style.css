@@ -1,0 +1,15 @@
+body {
+    background-color: #FEFEFE;
+}
+
+.container {
+    width: 70%;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+
+img {
+    border: 2px solid gray;
+    border-radius: 5px;
+}

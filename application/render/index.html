@@ -2,11 +2,109 @@
 <html>
 
 <head>
-    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Bicopter </title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <h1>Index</h1>
+    <div class="container mt-3 pt-3">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">IP Address: </span>
+            </div>
+            <input class="form-control" type="text" size="15">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">Connect</button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-4 pt-2 pb-2">
+                <div class="d-flex justify-content-center">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="img/arrow-up.png" width="70">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="img/blank.png" width="70">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="img/arrow-down.png" width="70">
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-4 pt-2 pb-2">
+                <button class="btn btn-sm btn-block btn-success mt-2">Wing lights</button>
+                <button class="btn btn-sm btn-block btn-success mt-2">Tail light</button>
+
+                <div class="progress mt-4">
+                    <img src="img/connected.png">
+                    <div style="width: 10%;" class="red progress-bar">
+                    </div>
+                </div>
+                <div class="progress mt-2">
+                    <img src="img/battery.png">
+                    <div style="width: 90%;" class="red progress-bar">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 pt-2 pb-2">
+                <div class="d-flex justify-content-center">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="img/arrow-forward.png" width="70">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="img/arrow-left.png" width="70">
+                            </td>
+                            <td>
+                                <img src="img/blank.png" width="70">
+                            </td>
+                            <td>
+                                <img src="img/arrow-right.png" width="70">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="img/arrow-backward.png" width="70">
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+    </div>
+
+    <script src="script/jquery-3.2.1.slim.min.js"></script>
+    <script src="script/popper.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
 </body>
 
 </html>
