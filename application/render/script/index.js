@@ -10,8 +10,8 @@ const backwardButton = document.getElementById("backward");
 const leftButton = document.getElementById("left");
 const rightButton = document.getElementById("right");
 
-const wingLightsButton = document.getElementById("wing-lights");
-const tailLightButton = document.getElementById("tail-light");
+const wingLightsCheckBox = document.getElementById("wing-lights");
+const tailLightCheckBox = document.getElementById("tail-light");
 
 let isDeviceConnected = false;
 
@@ -56,21 +56,14 @@ for (let i = 0; i < control.length; i++) {
 }
 
 // LED light controls
-wingLightsButton.addEventListener("click", () => {
-    console.log("LED lights: Wing");
+$(function () {
+    $('#led-lights').change(function () {
+        console.log("LED lights");
 
-    if (isDeviceConnected)
-        fetch(`http://${textFieldIP.value}/wing-lights`);
+        if (isDeviceConnected)
+            fetch(`http://${textFieldIP.value}/led-lights}`);
+    })
 })
-
-
-tailLightButton.addEventListener("click", () => {
-    console.log("LED lights: Tail");
-
-    if (isDeviceConnected)
-        fetch(`http://${textFieldIP.value}/tail-lights`);
-})
-
 
 // Generic modal to elegantly display message
 
@@ -84,4 +77,16 @@ function displayMessageViaModal(messageTitle, messageContent) {
     document.getElementsByClassName('modal-title')[0].innerText = messageTitle;
     document.getElementsByClassName('modal-body')[0].innerText = messageContent;
     document.getElementById('show-modal').click();
+}
+
+
+if (
+    screen.width < 700 ||
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPod/i)
+) {
+    const container = document.getElementsByClassName("container")[0];
+    container.style.width = "98%";
 }
