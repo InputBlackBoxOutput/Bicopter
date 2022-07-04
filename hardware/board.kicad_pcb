@@ -1662,7 +1662,7 @@
     (pad "" np_thru_hole circle (at 2.89 -2.6) (size 0.65 0.65) (drill 0.65) (layers *.Cu *.Mask))
     (pad S1 thru_hole oval (at 4.32 1.05) (size 1 1.6) (drill oval 0.6 1.2) (layers *.Cu *.Mask)
       (net 1 GND))
-    (model ${KIPRJMOD}/board.pretty/USB-TYPE-C.step
+    (model ${KIPRJMOD}/library/3d-models/USB-TYPE-C.step
       (offset (xyz 0 -1 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -1893,7 +1893,7 @@
       (net 48 "Net-(R17-Pad1)"))
     (pad 1 smd roundrect (at -2.475 -1.905) (size 1.97 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.07000000000000001)
       (net 1 GND))
-    (model ${KIPRJMOD}/board.pretty/TP4056.step
+    (model ${KIPRJMOD}/library/3d-models/TP4056.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -2977,7 +2977,7 @@
     (pad 2 smd roundrect (at -2.88 0.325 90) (size 1.56 0.4) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.05)
       (net 6 /Sheet6241753E/BATT-))
     (pad 1 smd roundrect (at -2.88 0.975 90) (size 1.56 0.4) (layers B.Cu B.Paste B.Mask) (roundrect_rratio 0.05))
-    (model ${KIPRJMOD}/board.pretty/FS8205A.step
+    (model ${KIPRJMOD}/library/3d-models/FS8205A.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 90))
@@ -3144,7 +3144,7 @@
       (net 14 "Net-(D8-Pad2)"))
     (pad 1 smd rect (at -4.15 0) (size 2.7 3.6) (layers B.Cu B.Paste B.Mask)
       (net 5 "Net-(C5-Pad1)"))
-    (model ${KIPRJMOD}/board.pretty/Inductor-SMD.step
+    (model ${KIPRJMOD}/library/3d-models/Inductor-SMD.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 90))
@@ -3272,10 +3272,10 @@
       (net 18 "Net-(IC1-Pad2)"))
     (pad 1 smd rect (at -1.35 0.95 180) (size 1.56 0.65) (layers B.Cu B.Paste B.Mask)
       (net 19 "Net-(IC1-Pad1)"))
-    (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/SOT-23-6.wrl
+    (model ${KIPRJMOD}/library/3d-models/DW01A.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 0))
     )
   )
 

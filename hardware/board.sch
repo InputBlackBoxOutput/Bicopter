@@ -67,16 +67,16 @@ Wire Wire Line
 Wire Wire Line
 	2350 2250 2850 2250
 Wire Wire Line
-	7150 1625 7600 1625
-Text Label 7600 1625 2    50   ~ 0
+	7050 1625 7500 1625
+Text Label 7500 1625 2    50   ~ 0
 IO0
 Wire Wire Line
-	7150 1725 7600 1725
+	7050 1725 7500 1725
 Wire Wire Line
-	7150 1925 7600 1925
-Text Label 7600 1725 2    50   ~ 0
+	7050 1925 7500 1925
+Text Label 7500 1725 2    50   ~ 0
 TXD
-Text Label 7600 1925 2    50   ~ 0
+Text Label 7500 1925 2    50   ~ 0
 RXD
 $Comp
 L Switch:SW_Push SW1
@@ -428,19 +428,19 @@ Wire Wire Line
 	3175 3500 3175 3725
 Wire Wire Line
 	2900 3500 3175 3500
-Text Label 7600 2925 2    50   ~ 0
+Text Label 7500 2925 2    50   ~ 0
 LED_TAIL
-Text Label 7600 2725 2    50   ~ 0
+Text Label 7500 2725 2    50   ~ 0
 LED_A
-Text Label 7600 2825 2    50   ~ 0
+Text Label 7500 2825 2    50   ~ 0
 LED_B
-Text Label 7600 2525 2    50   ~ 0
+Text Label 7500 2525 2    50   ~ 0
 MOTOR_A
-Text Label 7600 2625 2    50   ~ 0
+Text Label 7500 2625 2    50   ~ 0
 MOTOR_B
-Text Label 7600 2325 2    50   ~ 0
+Text Label 7500 2325 2    50   ~ 0
 SERVO_A
-Text Label 7600 2425 2    50   ~ 0
+Text Label 7500 2425 2    50   ~ 0
 SERVO_B
 $Sheet
 S 9175 1300 900  550 
@@ -465,26 +465,26 @@ F0 "Sheet6241753E" 50
 F1 "BMS.sch" 50
 F2 "ADC" I L 9175 2500 50 
 $EndSheet
-Text Label 7600 3025 2    50   ~ 0
+Text Label 7500 3025 2    50   ~ 0
 SDA
-Text Label 7600 3125 2    50   ~ 0
+Text Label 7500 3125 2    50   ~ 0
 SCL
 Wire Wire Line
-	7600 3025 7150 3025
+	7500 3025 7050 3025
 Wire Wire Line
-	7150 2925 7600 2925
+	7050 2925 7500 2925
 Wire Wire Line
-	7150 2825 7600 2825
+	7050 2825 7500 2825
 Wire Wire Line
-	7150 2725 7600 2725
+	7050 2725 7500 2725
 Wire Wire Line
-	7150 2625 7600 2625
+	7050 2625 7500 2625
 Wire Wire Line
-	7150 2525 7600 2525
+	7050 2525 7500 2525
 Wire Wire Line
-	7150 2425 7600 2425
+	7050 2425 7500 2425
 Wire Wire Line
-	7150 2325 7600 2325
+	7050 2325 7500 2325
 Wire Wire Line
 	3975 3800 3975 3900
 $Comp
@@ -721,12 +721,12 @@ F 3 "~" H 5475 6700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7600 3125 7150 3125
+	7500 3125 7050 3125
 Wire Wire Line
 	9175 2500 8900 2500
 Text Label 8900 2500 0    50   ~ 0
 ADC
-Text Label 7600 3925 2    50   ~ 0
+Text Label 7500 3925 2    50   ~ 0
 ADC
 $Comp
 L power:+3.3V #PWR?
@@ -863,65 +863,65 @@ F 3 "" H 4675 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6550 1175 6550 1425
+	6450 1175 6450 1425
 $Comp
 L RF_Module:ESP32-WROOM-32 U3
 U 1 1 625F5211
-P 6550 2825
-F 0 "U3" H 6550 4406 50  0000 C CNN
-F 1 "ESP32-WROOM-32" H 6550 4315 50  0000 C CNN
-F 2 "RF_Module:ESP32-WROOM-32" H 6550 1325 50  0001 C CNN
-F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 6250 2875 50  0001 C CNN
-	1    6550 2825
+P 6450 2825
+F 0 "U3" H 6450 4406 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 6450 4315 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 6450 1325 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 6150 2875 50  0001 C CNN
+	1    6450 2825
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR021
 U 1 1 62331A9D
-P 6550 1175
-F 0 "#PWR021" H 6550 1025 50  0001 C CNN
-F 1 "+3.3V" H 6565 1348 50  0000 C CNN
-F 2 "" H 6550 1175 50  0001 C CNN
-F 3 "" H 6550 1175 50  0001 C CNN
-	1    6550 1175
+P 6450 1175
+F 0 "#PWR021" H 6450 1025 50  0001 C CNN
+F 1 "+3.3V" H 6465 1348 50  0000 C CNN
+F 2 "" H 6450 1175 50  0001 C CNN
+F 3 "" H 6450 1175 50  0001 C CNN
+	1    6450 1175
 	1    0    0    -1  
 $EndComp
-Text Label 5500 1625 0    50   ~ 0
+Text Label 5400 1625 0    50   ~ 0
 EN
 Wire Wire Line
-	5950 1625 5500 1625
-NoConn ~ 5950 1825
-NoConn ~ 5950 1925
+	5850 1625 5400 1625
+NoConn ~ 5850 1825
+NoConn ~ 5850 1925
 Wire Wire Line
-	7150 3925 7600 3925
+	7050 3925 7500 3925
 $Comp
 L power:GND #PWR022
 U 1 1 626232DA
-P 6550 4325
-F 0 "#PWR022" H 6550 4075 50  0001 C CNN
-F 1 "GND" H 6555 4152 50  0000 C CNN
-F 2 "" H 6550 4325 50  0001 C CNN
-F 3 "" H 6550 4325 50  0001 C CNN
-	1    6550 4325
+P 6450 4325
+F 0 "#PWR022" H 6450 4075 50  0001 C CNN
+F 1 "GND" H 6455 4152 50  0000 C CNN
+F 2 "" H 6450 4325 50  0001 C CNN
+F 3 "" H 6450 4325 50  0001 C CNN
+	1    6450 4325
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6550 4325 6550 4225
+	6450 4325 6450 4225
 Wire Wire Line
-	7150 2025 7600 2025
-Text Label 7600 2025 2    50   ~ 0
+	7050 2025 7500 2025
+Text Label 7500 2025 2    50   ~ 0
 IO4
 Wire Wire Line
-	7150 2125 7600 2125
-Text Label 7600 2125 2    50   ~ 0
+	7050 2125 7500 2125
+Text Label 7500 2125 2    50   ~ 0
 IO5
 Wire Wire Line
-	7150 2225 7600 2225
-Text Label 7600 2225 2    50   ~ 0
+	7050 2225 7500 2225
+Text Label 7500 2225 2    50   ~ 0
 IO12
 Wire Wire Line
-	7150 1825 7600 1825
-Text Label 7600 1825 2    50   ~ 0
+	7050 1825 7500 1825
+Text Label 7500 1825 2    50   ~ 0
 IO2
 $Comp
 L power:+3.3V #PWR?
@@ -1078,28 +1078,28 @@ Text Label 2250 3500 0    50   ~ 0
 LED_A
 Wire Wire Line
 	1625 3500 1975 3500
-NoConn ~ 5950 2825
-NoConn ~ 5950 2925
-NoConn ~ 5950 3025
-NoConn ~ 5950 3125
-NoConn ~ 5950 3225
-NoConn ~ 5950 3325
-Text Label 7600 3525 2    50   ~ 0
+NoConn ~ 5850 2825
+NoConn ~ 5850 2925
+NoConn ~ 5850 3025
+NoConn ~ 5850 3125
+NoConn ~ 5850 3225
+NoConn ~ 5850 3325
+Text Label 7500 3525 2    50   ~ 0
 IO27
 Wire Wire Line
-	7150 3525 7600 3525
-Text Label 7600 3425 2    50   ~ 0
+	7050 3525 7500 3525
+Text Label 7500 3425 2    50   ~ 0
 IO26
 Wire Wire Line
-	7150 3425 7600 3425
-Text Label 7600 3325 2    50   ~ 0
+	7050 3425 7500 3425
+Text Label 7500 3325 2    50   ~ 0
 IO25
 Wire Wire Line
-	7150 3325 7600 3325
-Text Label 7600 3225 2    50   ~ 0
+	7050 3325 7500 3325
+Text Label 7500 3225 2    50   ~ 0
 IO23
 Wire Wire Line
-	7150 3225 7600 3225
+	7050 3225 7500 3225
 Text Label 9475 5550 0    50   ~ 0
 IO27
 Wire Wire Line
@@ -1173,11 +1173,11 @@ F 3 "" H 1275 3525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7150 3625 7600 3625
+	7050 3625 7500 3625
 Wire Wire Line
-	7600 3725 7150 3725
+	7500 3725 7050 3725
 Wire Wire Line
-	7150 3825 7600 3825
+	7050 3825 7500 3825
 $Comp
 L Connector_Generic:Conn_01x04 J8
 U 1 1 623C8E47
@@ -1189,11 +1189,11 @@ F 3 "~" H 8875 4275 50  0001 C CNN
 	1    8875 4275
 	1    0    0    -1  
 $EndComp
-Text Label 7600 3625 2    50   ~ 0
+Text Label 7500 3625 2    50   ~ 0
 LED_R
-Text Label 7600 3725 2    50   ~ 0
+Text Label 7500 3725 2    50   ~ 0
 LED_G
-Text Label 7600 3825 2    50   ~ 0
+Text Label 7500 3825 2    50   ~ 0
 LED_B
 Wire Wire Line
 	8500 4375 8675 4375
