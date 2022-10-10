@@ -8,5 +8,9 @@ Motor::Motor(uint8_t pin) : ESP32PWM()
 
 void Motor::setDutyCyclePWM(uint8_t duty)
 {
-    write(duty);
+    if (duty > 100)
+    {
+        return;
+    }
+    writeScaled(duty / 100);
 }

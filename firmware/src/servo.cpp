@@ -5,7 +5,7 @@ TiltServo::TiltServo(uint8_t pin) : Servo()
     ESP32PWM::allocateTimer(1);
 
     setPeriodHertz(50);
-    attach(pin, 1000, 2000);
+    attach(pin, 90 - maxTiltAngle, 90 + maxTiltAngle);
 
     write(90);
 }
@@ -22,7 +22,7 @@ void TiltServo::setServoAngle(uint8_t requiredPosition)
         for (uint8_t pos = currentPosition; pos <= requiredPosition; pos++)
         {
             write(pos);
-            delay(1);
+            delayMicroseconds(positionTransitionDelay);
         }
     }
     if (requiredPosition < currentPosition)
@@ -30,7 +30,7 @@ void TiltServo::setServoAngle(uint8_t requiredPosition)
         for (uint8_t pos = currentPosition; pos >= requiredPosition; pos--)
         {
             write(pos);
-            delay(1);
+            delayMicroseconds(positionTransitionDelay);
         }
     }
 

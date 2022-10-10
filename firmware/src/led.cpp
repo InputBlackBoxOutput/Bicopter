@@ -1,4 +1,4 @@
-#include "led.h"
+#include "LED.h"
 
 LED::LED()
 {
@@ -18,11 +18,11 @@ void LED::blinkLED(LED_t led, uint8_t times)
     }
 }
 
-inline void LED::turnLEDOn(LED_t led)
+void LED::turnLEDOn(LED_t led)
 {
     digitalWrite(led, HIGH);
 }
-inline void LED::turnLEDOff(LED_t led)
+void LED::turnLEDOff(LED_t led)
 {
     digitalWrite(led, LOW);
 }

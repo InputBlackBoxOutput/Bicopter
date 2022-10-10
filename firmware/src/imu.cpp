@@ -1,4 +1,4 @@
-#include "imu.h"
+#include "IMU.h"
 
 InertialMeasurementUnit::InertialMeasurementUnit()
 {
