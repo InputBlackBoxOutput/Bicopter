@@ -1,3 +1,6 @@
+#ifndef STATE_H
+#define STATE_H
+
 #include <Arduino.h>
 
 class ControlState
@@ -13,3 +16,5 @@ public:
     bool LED;
     double batteryVoltage;
 };
+
+#endif // STATE_H

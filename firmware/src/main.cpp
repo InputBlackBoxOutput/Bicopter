@@ -1,7 +1,5 @@
 #include <Arduino.h>
 
-#define STEP_PWM 0.25  // Granularity for change in motor PWM
-#define STEP_ANGLE 0.1 // Granularity for change in servo motor angle
 #define LOOP_DELAY 300 // ms
 
 #include "servo.h"
@@ -10,6 +8,8 @@
 #include "IMU.h"
 #include "BMS.h"
 #include "state.h"
+#include "server.h"
+// #include "PID.h"
 
 TiltServo servoA(SERVO_A_PIN);
 TiltServo servoB(SERVO_B_PIN);
