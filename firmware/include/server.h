@@ -4,8 +4,8 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include "credentials.h"
-
 #include "state.h"
+
 extern ControlState currentState;
 
 #define STEP_PWM 0.25  // Granularity for change in motor PWM
@@ -15,7 +15,7 @@ class ESP32Server
 {
 public:
     void setup(void);
-    void handleClient(unsigned long timestamp, float data[]);
+    void handleClient();
 
     void handleRouteUp();
     void handleRouteDown();

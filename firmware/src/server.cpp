@@ -156,7 +156,7 @@ void ESP32Server::handleRouteWiFiStrength()
     client.print("\"}");
 }
 
-void ESP32Server::handleClient(unsigned long timestamp, float data[])
+void ESP32Server::handleClient()
 {
     client = server.available();
 

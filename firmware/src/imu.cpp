@@ -22,8 +22,8 @@ void InertialMeasurementUnit::calculateTiltAngles(unsigned long elapsedTime)
     tiltAngleAccelerometer[1] = atan(-1 * (ax / 16384.0) / sqrt(pow((ay / 16384.0), 2) + pow((az / 16384.0), 2))) * (180 / PI);
 
     // Calculate tilt angles using gyroscope
-    tiltAngleGyroscope[0] = tiltAngle[0] + gx * elapsedTime;
-    tiltAngleGyroscope[1] = tiltAngle[1] + gy * elapsedTime;
+    tiltAngleGyroscope[0] = (tiltAngle[0] + gx * elapsedTime) * (180 / PI);
+    tiltAngleGyroscope[1] = (tiltAngle[1] + gy * elapsedTime) * (180 / PI);
 
     // Sensor fusion using complementary filter
     tiltAngle[0] = 0.98 * tiltAngleGyroscope[0] + 0.02 * tiltAngleAccelerometer[0];
