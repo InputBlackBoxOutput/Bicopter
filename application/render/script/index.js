@@ -13,7 +13,13 @@ const rightButton = document.getElementById("right");
 const wingLightsCheckBox = document.getElementById("wing-lights");
 const tailLightCheckBox = document.getElementById("tail-light");
 
+const wifiStrengthBar = document.getElementById("wifi-strength");
+const batteryVoltageBar = document.getElementById("battery-voltage");
+
+
 let isDeviceConnected = false;
+let wifiStrengthPercentage = 100;
+let batteryVoltagePercentage = 100;
 
 // Validate IP address entered by the user
 function validateIPAddress(IP) {
@@ -65,14 +71,48 @@ $(function () {
     })
 })
 
-// Generic modal to elegantly display message
+// Update battery voltage and WiFi strength at regular intervals
+function updateWifiStrength() {
+    fetch(`http://${textFieldIP.value}/wifi-strength}`)
+        .then((response) => response.json())
+        .then((data) => {
+            wifiStrengthPercentage = (data.wifiStrengthPercentage + 120) * (100 / 120);
+            wifiStrengthBar.style.width = `${wifiStrengthPercentage}%`;
+        });
+}
 
-// "Low battery voltage!"
-// "Please land the bicopter as soon as possible."
+function updateBatteryVoltage() {
+    fetch(`http://${textFieldIP.value}/battery-voltage}`)
+        .then((response) => response.json())
+        .then((data) => {
+            batteryVoltagePercentage = (data.Voltage - 3.2) * 100;
+            batteryVoltageBar.style.width = `${batteryVoltagePercentage}%`;
+        });
+}
 
-// "Low signal strenght!"
-// "Turn the bicopter around to avoid loosing connection."
+setInterval(() => {
+    if (isDeviceConnected) {
+        updateBatteryVoltage();
+        updateWifiStrength();
 
+        if (wifiStrengthPercentage <= 25) {
+            displayMessageViaModal(
+                "Low signal strength!",
+                "Turn the bicopter around to avoid loosing connection."
+            )
+        }
+
+        if (batteryVoltagePercentage <= 25) {
+            displayMessageViaModal(
+                "Low battery voltage!",
+                "Please land the bicopter as soon as possible."
+            )
+        }
+    }
+}, 1500);
+
+
+// Generic modal to elegantly display messages
 function displayMessageViaModal(messageTitle, messageContent) {
     document.getElementsByClassName('modal-title')[0].innerText = messageTitle;
     document.getElementsByClassName('modal-body')[0].innerText = messageContent;
