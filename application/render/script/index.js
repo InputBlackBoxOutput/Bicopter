@@ -10,9 +10,7 @@ const backwardButton = document.getElementById("backward");
 const leftButton = document.getElementById("left");
 const rightButton = document.getElementById("right");
 
-const wingLightsCheckBox = document.getElementById("wing-lights");
-const tailLightCheckBox = document.getElementById("tail-light");
-
+const ledLightsToggle = document.getElementById("led-lights");
 const wifiStrengthBar = document.getElementById("wifi-strength");
 const batteryVoltageBar = document.getElementById("battery-voltage");
 
@@ -62,13 +60,11 @@ for (let i = 0; i < control.length; i++) {
 }
 
 // LED light controls
-$(function () {
-    $('#led-lights').change(function () {
-        console.log("LED lights");
+ledLightsToggle.addEventListener('change', () => {
+    console.log("LED lights");
 
-        if (isDeviceConnected)
-            fetch(`http://${textFieldIP.value}/led-lights}`);
-    })
+    if (isDeviceConnected)
+        fetch(`http://${textFieldIP.value}/led-lights}`);
 })
 
 // Update battery voltage and WiFi strength at regular intervals
